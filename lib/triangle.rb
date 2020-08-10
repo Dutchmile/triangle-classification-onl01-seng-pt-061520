@@ -16,7 +16,7 @@ class Triangle
 
   def kind
     sides = [@side1, @side2, @side3]
-    if sides.detect {|s| s == 0} == true
+    if @side1 == 0 || @side2 == 0 || @side3 == 0
       raise TriangleError
       else
         if @side2 == @side3 && @side1 != @side2
