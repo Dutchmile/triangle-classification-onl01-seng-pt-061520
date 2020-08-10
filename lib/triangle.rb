@@ -18,7 +18,7 @@ class Triangle
     sides = [@side1, @side2, @side3]
       if sides.detect {|s| s <= 0}
       raise TriangleError
-      elsif @side1 + @side2 < @side3 || @side1 + @side3 < @side2 || @side2 + @side3 < @side1
+    elsif @side1 + @side2 <= @side3 || @side1 + @side3 <= @side2 || @side2 + @side3 <= @side1
       raise TriangleError
       else
         if @side2 == @side3 && @side1 != @side2
