@@ -10,7 +10,7 @@ class Triangle
     type = self.kind
   end
 
-  class TriangleError < StandardError 
+  class TriangleError < StandardError
   end
 
   def kind
