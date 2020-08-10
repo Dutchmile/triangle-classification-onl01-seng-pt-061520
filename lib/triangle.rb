@@ -11,11 +11,12 @@ class Triangle
   end
 
   class TriangleError < StandardError
+
   end
 
   def kind
     sides = [@side1, @side2, @side3]
-    if sides.detect {|s| s == 0}
+    if sides.detect {|s| s == 0} == true
       raise TriangleError
       else
         if @side2 == @side3 && @side1 != @side2
