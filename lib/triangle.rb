@@ -1,11 +1,13 @@
 class Triangle
 
+  attr_accessor :type
   attr_reader :side1_length, :side2_length, :side3_length
 
   def initialize(side1_length,side2_length,side3_length)
     @side1 = side1_length
     @side2 = side2_length
     @side3 = side3_length
+    type = self.kind
   end
 
   def kind
