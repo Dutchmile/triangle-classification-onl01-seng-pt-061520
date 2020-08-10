@@ -13,7 +13,7 @@ class Triangle
   def kind
     if @side2 == @side3 && @side1 != @side2
       self.type = :isosceles
-    elsif @side1 == @side3 && @side1 != @side 2
+    elsif @side1 == @side3 && @side1 != @side2
       self.type = :isosceles
     elsif @side1 == @side2 && @side1 == @side3
       self.type = :equilateral
