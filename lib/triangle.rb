@@ -11,6 +11,9 @@ class Triangle
   end
 
   def kind
+    sides = [@side1, @side2, @side3]
+    if sides.detect {|s| s == 0}
+      raise TriangleError
     if @side2 == @side3 && @side1 != @side2
       self.type = :isosceles
     elsif @side1 == @side3 && @side1 != @side2
