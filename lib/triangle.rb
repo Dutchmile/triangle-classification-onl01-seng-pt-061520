@@ -10,6 +10,9 @@ class Triangle
     type = self.kind
   end
 
+  class TriangleError < StandardError 
+  end
+
   def kind
     sides = [@side1, @side2, @side3]
     if sides.detect {|s| s == 0}
@@ -31,6 +34,5 @@ class Triangle
       end
   end
 
-  def TriangleError < StandardError
-  end
+
 end
