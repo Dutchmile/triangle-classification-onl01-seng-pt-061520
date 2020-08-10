@@ -14,19 +14,21 @@ class Triangle
     sides = [@side1, @side2, @side3]
     if sides.detect {|s| s == 0}
       raise TriangleError
-    if @side2 == @side3 && @side1 != @side2
-      self.type = :isosceles
-    elsif @side1 == @side3 && @side1 != @side2
-      self.type = :isosceles
-    elsif @side1 == @side2 && @side1 != @side3
-      self.type = :isosceles
-    elsif @side1 == @side2 && @side1 == @side3
-      self.type = :equilateral
-    elsif @side1 != @side2 && @side1 != @side3 && @side2 != @side3
-      self.type = :scalene
-    else
-      raise TriangleError
-    end
+      else
+        if @side2 == @side3 && @side1 != @side2
+          self.type = :isosceles
+        elsif @side1 == @side3 && @side1 != @side2
+          self.type = :isosceles
+        elsif @side1 == @side2 && @side1 != @side3
+          self.type = :isosceles
+        elsif @side1 == @side2 && @side1 == @side3
+          self.type = :equilateral
+        elsif @side1 != @side2 && @side1 != @side3 && @side2 != @side3
+          self.type = :scalene
+        else
+          raise TriangleError
+        end
+      end
   end
 
   def TriangleError
