@@ -12,9 +12,9 @@ class Triangle
 
   def kind
     if @side1 != @side2 && @side1 != @side3 && @side2 != @side3
-      self.type = "isosceles"
+      self.type = :isosceles
     elsif @side1 == @side2 && @side1 == @side3
-      self.type = "equilateral"
+      self.type = :equilateral
     else
       raise TriangleError
     end
