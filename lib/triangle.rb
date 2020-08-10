@@ -19,6 +19,8 @@ class Triangle
       self.type = :isosceles
     elsif @side1 == @side2 && @side1 == @side3
       self.type = :equilateral
+    elsif @side1 != @side2 && @side1 != @side3 && @side2 != @side3
+      self.type = :scalene
     else
       raise TriangleError
     end
